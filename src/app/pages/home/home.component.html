@@ -1,0 +1,15 @@
+<section class="main">
+  <app-input [itemEmEdicao]="itemEmEdicao"> </app-input>
+  <div class="container">
+    <div class="lista">
+      <h4 class="title-list">Lista de Compras</h4>
+      <div *ngFor="let item of listaDeCompras">
+        <app-item
+          [item]="item"
+          (emissaoItemEditar)="editarItem($event)"
+          (emissaoItemExcluir)="excluirItem($event)"
+        ></app-item>
+      </div>
+    </div>
+  </div>
+</section>
